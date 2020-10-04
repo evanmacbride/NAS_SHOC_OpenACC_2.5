@@ -1,6 +1,6 @@
 [submodule "NAS"]
 	path = NAS
-	url = https://github.com/spino327/NAS_OpenACC_2.5
+	url = https://github.com/evanmacbride/NAS_OpenACC_2.5.git
 [submodule "SHOC"]
 	path = SHOC
 	url = https://github.com/spino327/SHOC_OpenACC_2.5
@@ -9,4 +9,4 @@
 	url = https://github.com/spino327/NPB-OMP-C-mirror
 [submodule "NPB-CUDA"]
 	path = NPB-CUDA
-	url = https://github.com/spino327/NPB-CUDA-mirror
+	url = https://github.com/evanmacbride/NPB-CUDA-mirror.git
