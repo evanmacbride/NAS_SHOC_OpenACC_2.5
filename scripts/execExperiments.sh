@@ -112,12 +112,16 @@ if [ "$ENV_THREADS" == "" ]; then
 else
     # running multicore
     # number of threads to use
+    echo "EJM: Thread environment variable detected:"
+    echo $ENV_THREADS
+    #exit -1
     if [ "${#THREADS[@]}" -gt "0" ]; then 
         
         for th in ${THREADS[@]}; do
             export EXTRAS="ENV_THREADS=$ENV_THREADS":"NUM_THREADS=$th"
             #export $ENV_THREADS=$th
             (./singleExperiment.sh "${CLASSES[*]}" ${BENCHMARK_SUITE} $ENV_THREADS $th) 2>&1 | tee -a logExperiments.txt
+	    #echo $ENV_THREADS=$th
         done
     else
         echo "ERROR: please set the THREADS option in your config file. e.g. THREADS=1 2 4"

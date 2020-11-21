@@ -11,7 +11,9 @@ fi
 
 # defining functions
 function run_nas() {
-
+    #echo "EJM 14"
+    #echo $ENV_THREADS=$NUM_THREADS
+    #exit 0
     INPUT1=$1
     CLASSES=(${INPUT1[@]})
     BENCHMARK_SUITE=$2
@@ -106,7 +108,8 @@ if [ "$#" -ge "3" ]; then
 
     export $ENV_THREADS=$NUM_THREADS
     echo Running multicore with $ENV_THREADS=$NUM_THREADS
-
+    #echo "EJM 109"
+    #exit 0
     RECORD_CPU=1
     RECORD_APP=$PWD/record_cpu.sh
 fi
